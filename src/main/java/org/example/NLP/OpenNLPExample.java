@@ -1,4 +1,4 @@
-package org.example;
+package org.example.NLP;
 
 // Importe as classes necessárias
 import opennlp.tools.namefind.NameFinderME;

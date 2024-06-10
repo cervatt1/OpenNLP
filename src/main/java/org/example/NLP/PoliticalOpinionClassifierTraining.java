@@ -1,4 +1,4 @@
-package org.example;
+package org.example.NLP;
 
 import opennlp.tools.doccat.DoccatFactory;
 import opennlp.tools.doccat.DoccatModel;
