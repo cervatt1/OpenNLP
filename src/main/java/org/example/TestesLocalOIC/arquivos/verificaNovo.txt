@@ -1,0 +1,23 @@
+    /*
+    passo 1
+    colar verificaConversorNovo() do s1
+
+    passo 2
+    criar int i = 0; no começo do verificaConversorNovo()
+
+    passo 3
+    dar replace all em
+    "if (" para "if("
+
+    passo 4
+    dar replace all em
+    "return true" para "System.out.println("ENTROU NO NUM " + i);"
+
+    passo 5
+    dar replace all em
+    "        if("
+    para
+    "       i++;
+            if("
+
+    */

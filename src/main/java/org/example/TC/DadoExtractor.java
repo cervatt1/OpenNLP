@@ -39,7 +39,7 @@ public class DadoExtractor {
 
     public static String extractOrigemRacial(String text) {
         ArrayList<String> results = new ArrayList<>();
-        String resultsFinal = "";
+        StringBuilder resultsFinal = new StringBuilder();
         String regex = "\\b(?:branco|negro|pardo|asiático|indígena|latino|europeu|africano|árabe|mulato)\\b";
 
         Pattern pattern = Pattern.compile(regex);
@@ -50,16 +50,16 @@ public class DadoExtractor {
         }
 
         for (String dado : results) {
-            resultsFinal += "," + dado;
+            resultsFinal.append(",").append(dado);
         }
-        resultsFinal = resultsFinal.replaceFirst(",", "");
-        return resultsFinal;
+        resultsFinal = new StringBuilder(resultsFinal.toString().replaceFirst(",", ""));
+        return resultsFinal.toString();
     }
 
 
     public static String extractConviccaoReligiosa(String text) {
         ArrayList<String> results = new ArrayList<>();
-        String resultsFinal = "";
+        StringBuilder resultsFinal = new StringBuilder();
         String regex = "\\b(?:cristão|muçulmano|judeu|budista|hinduísta|ateu|agnóstico|espírita|umbandista|sikh)\\b";
 
         Pattern pattern = Pattern.compile(regex);
@@ -70,16 +70,16 @@ public class DadoExtractor {
         }
 
         for (String dado : results) {
-            resultsFinal += "," + dado;
+            resultsFinal.append(",").append(dado);
         }
-        resultsFinal = resultsFinal.replaceFirst(",", "");
-        return resultsFinal;
+        resultsFinal = new StringBuilder(resultsFinal.toString().replaceFirst(",", ""));
+        return resultsFinal.toString();
     }
 
 
     public static String extractDadoBiometrico(String text) {
         ArrayList<String> results = new ArrayList<>();
-        String resultsFinal = "";
+        StringBuilder resultsFinal = new StringBuilder();
         String regex = "\\b(?:impressão digital|íris escaneada|voz reconhecida|retina mapeada|DNA registrado|geometria da mão|face reconhecida|veias escaneadas|padrão de digitação|passos reconhecidos|reconhecimento facial|impressão da palma|padrão de íris|reconhecimento de voz|exame de retina|DNA armazenado|mapeamento facial|geometria das veias|assinatura digital|padrão de fala|escaneamento da íris|mapeamento de retina|análise de voz|leitura de impressão|registro de DNA|reconhecimento de face|varredura da mão|identificação de veias|análise de passos|padrão vocal)\\b";
 
         Pattern pattern = Pattern.compile(regex);
@@ -90,15 +90,15 @@ public class DadoExtractor {
         }
 
         for(String dado : results){
-            resultsFinal += "," + dado;
+            resultsFinal.append(",").append(dado);
         }
-        resultsFinal = resultsFinal.replaceFirst(",","");
-        return resultsFinal;
+        resultsFinal = new StringBuilder(resultsFinal.toString().replaceFirst(",", ""));
+        return resultsFinal.toString();
     }
 
     public static String extractDadoGenetico(String text) {
         ArrayList<String> results = new ArrayList<>();
-        String resultsFinal = "";
+        StringBuilder resultsFinal = new StringBuilder();
         String regex = "\\b(?:DNA alterado|mutação genética|cromossomo extra|polimorfismo|síndrome genética|doença hereditária|marcador genético|predisposição genética|gene recessivo|gene dominante|genoma sequenciado|mutação BRCA1|gene CFTR|alelos distintos|DNA mitocondrial|mutação somática|doença monogênica|epigenética alterada|haplótipo raro|heterozigose|homozigose|mutação germinativa|deleção genética|inserção genética|duplicação genética|translocação cromossômica|inversão cromossômica|mosaico genético|mutação no gene TP53|polimorfismo no gene APOE)\\b";
 
         Pattern pattern = Pattern.compile(regex);
@@ -109,16 +109,16 @@ public class DadoExtractor {
         }
 
         for (String dado : results) {
-            resultsFinal += "," + dado;
+            resultsFinal.append(",").append(dado);
         }
-        resultsFinal = resultsFinal.replaceFirst(",", "");
-        return resultsFinal;
+        resultsFinal = new StringBuilder(resultsFinal.toString().replaceFirst(",", ""));
+        return resultsFinal.toString();
     }
 
 
     public static String extractDadoSaude(String text) {
         ArrayList<String> results = new ArrayList<>();
-        String resultsFinal = "";
+        StringBuilder resultsFinal = new StringBuilder();
         String regex = "\\b(?:diabético|hipertenso|asmático|obeso|com depressão|ansioso|com hepatite|com câncer|alérgico|com AIDS|cardíaco|epiléptico|bipolar|hipertenso|autista|com TDAH|com artrite|com lúpus|esquizofrênico|celíaco|com esclerose|com endometriose|com fibromialgia|com Alzheimer|com leucemia|com anemia|com Parkinson|com osteoporose|com distrofia muscular|com síndrome de Down)\\b";
 
         Pattern pattern = Pattern.compile(regex);
@@ -129,16 +129,16 @@ public class DadoExtractor {
         }
 
         for (String dado : results) {
-            resultsFinal += "," + dado;
+            resultsFinal.append(",").append(dado);
         }
-        resultsFinal = resultsFinal.replaceFirst(",", "");
-        return resultsFinal;
+        resultsFinal = new StringBuilder(resultsFinal.toString().replaceFirst(",", ""));
+        return resultsFinal.toString();
     }
 
 
     public static String extractVidaSexual(String text) {
         ArrayList<String> results = new ArrayList<>();
-        String resultsFinal = "";
+        StringBuilder resultsFinal = new StringBuilder();
         String regex = "\\b(?:homossexual|heterossexual|bissexual|assexual|pansexual|demissexual|poliamoroso|monogâmico|celibatário|transgênero|intersexual|não-binário|queer|genderqueer|gênero fluido|arromântico|heteroflexível|homorromântico|biromântico|demirromântico|lithromântico|andrógino|bigênero|pangênero|genderflux|polissexual|graysexual)\\b";
 
         Pattern pattern = Pattern.compile(regex);
@@ -149,10 +149,10 @@ public class DadoExtractor {
         }
 
         for (String dado : results) {
-            resultsFinal += "," + dado;
+            resultsFinal.append(",").append(dado);
         }
-        resultsFinal = resultsFinal.replaceFirst(",", "");
-        return resultsFinal;
+        resultsFinal = new StringBuilder(resultsFinal.toString().replaceFirst(",", ""));
+        return resultsFinal.toString();
     }
 
 
