@@ -19,7 +19,7 @@ public class OpenNLPExample {
         InputStream inputStream = new FileInputStream("C:\\Users\\UserOtt\\IdeaProjects\\ThreadsTeste\\src\\main\\java\\org\\example\\model\\en-ner-person.bin");
         TokenNameFinderModel model = new TokenNameFinderModel(inputStream);
         NameFinderME nameFinder = new NameFinderME(model);
-
+// TESTE 
         // Frase de exemplo
         String sentence = "John Smith is a common name in Brazil. Pedro is another.";
 
